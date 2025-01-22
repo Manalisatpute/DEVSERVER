@@ -35,7 +35,7 @@ jobs:
       - name: SSH and Run Hello World on Dev Server
         uses: appleboy/ssh-action@v0.1.10
         with:
-          host: "[2600:1700:130:19f0:1ea0:b8ff:fe78:6702]"
+          host: "2600:1700:130:19f0::35"
           username: ${{ secrets.DEV_SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
