@@ -32,10 +32,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: SSH and Run Hello World on Prod Server
+      - name: SSH and Run Hello World on Dev Server
         uses: appleboy/ssh-action@v0.1.10
         with:
-          host: "65.108.37.107"
+          host: "[2600:1700:130:19f0::35]"
           username: ${{ secrets.DEV_SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
